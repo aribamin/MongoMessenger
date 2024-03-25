@@ -7,7 +7,15 @@ Group member names and ccids (3-4 members)
   jennif11, Jennifer Wang <br />
 
 # Group work break-down strategy
-Please add group work break-down strategy.
+Create the necessary starting files into the repo - Jared <br />
+
+Task 1: <br />
+- Set up the collections and having the documents inserted from the json files (steps 1 and 2) - Jared <br />
+- Step 3: Writing the queries needed - Split up between everyone? <br />
+- Step 4: Creating indices and analyzing runtime - 
+
+Task 2: <br />
+
 
 # Code execution guide
 Please add code execution guide. Make sure to include all details.
