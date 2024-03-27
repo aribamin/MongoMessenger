@@ -7,16 +7,42 @@ Group member names and ccids (3-4 members)
   jennif11, Jennifer Wang <br />
 
 # Group work break-down strategy - Started: 23 March, 2024, log updates here as we go, Completion: By hand-in deadline
+Our group adopted a collaborative approach where we divided the tasks based on individual strengths and interests. Here's a breakdown of the work items among partners:
 
+Arib
+
+
+Estimated Time Spent: 
+Progress: Completed all tasks assigned
+
+Dric
+Wrote the initial timelines in the README.md file
+Estimated Time Spent: 
+Progress: Completed all tasks assigned
+
+Jared
+
+Estimated Time Spent: 
+Progress: Completed all tasks assigned
+
+Jen
+
+Estimated Time Spent: 
+Progress: Completed all tasks assigned
+
+Coordination Method 
+We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. 
+
+Initial Tasks:
 Create the necessary starting files into the repo - Jared <br />
-Update the readme file with timelines as we go, remind group members to log their contributions in the discord group chat to keep a record of time as well as work done - Dric <br />
+Update the readme file timelines, remind group members to discuss their contributions in the discord group chat to keep a record of time as well as work done- Dric <br />
 
-Task 1 - Started: 23 March, 2024, Completition: <br />
+Task 1 - Started: 23 March, 2024 || Completition: <br />
 - Set up the collections and having the documents inserted from the json files (steps 1 and 2) - Jared <br />
 - Step 3: Writing the queries needed - Split up between everyone? <br />
 - Step 4: Creating indices and analyzing runtime - 
 
-Task 2: <br />
+Task 2 - Started 26 March, 2024 || Compleition: <br />
 
 
 # Code execution guide
