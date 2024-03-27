@@ -29,6 +29,7 @@ Progress: Completed all tasks assigned
 Jen <br />
 
 Estimated Time Spent: <br />
+-Go over part 1 and 2 of task 1, testing queries 
 Progress: Completed all tasks assigned
 
 Coordination Method  <br />
