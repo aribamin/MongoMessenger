@@ -27,7 +27,7 @@ Progress: Completed all tasks assigned
 
 Jen
 
-Estimated Time Spent: 
+Estimated Time Spent: <br />
 Progress: Completed all tasks assigned
 
 Coordination Method 
