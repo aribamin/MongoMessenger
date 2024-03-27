@@ -9,28 +9,29 @@ Group member names and ccids (3-4 members)
 # Group work break-down strategy - Started: 23 March, 2024, log updates here as we go, Completion: By hand-in deadline
 Our group adopted a collaborative approach where we divided the tasks based on individual strengths and interests. Here's a breakdown of the work items among partners:
 
-Arib
-
-
-Estimated Time Spent: <br />
-Progress: Completed all tasks assigned
-
-Dric
-Wrote the initial timelines in the README.md file <br />
-Estimated Time Spent: <br />
-Progress: Completed all tasks assigned
-
-Jared
+Arib <br />
 
 Estimated Time Spent: <br />
 Progress: Completed all tasks assigned
 
-Jen
+Dric <br />
+Contributed to group strategy and crafted a tentative README.md file <br />
 
 Estimated Time Spent: <br />
 Progress: Completed all tasks assigned
 
-Coordination Method 
+Jared <br />
+Initialized necessary repo files
+
+Estimated Time Spent: <br />
+Progress: Completed all tasks assigned
+
+Jen <br />
+
+Estimated Time Spent: <br />
+Progress: Completed all tasks assigned
+
+Coordination Method  <br />
 We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. 
 
 Initial Tasks:
