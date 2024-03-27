@@ -29,8 +29,8 @@ Progress: Completed all tasks assigned
 Jen <br />
 
 Estimated Time Spent: <br />
--Go over part 1 and 2 of task 1, testing queries 
-Progress: Completed all tasks assigned
+testing queries debug (2 hour)
+Progress: Completed all tasks assigned  <br />
 
 Coordination Method  <br />
 We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. 
@@ -42,8 +42,10 @@ Update the readme file timelines, remind group members to discuss their contribu
 
 Task 1 - Started: 23 March, 2024 || Completition: 29th March, 2024<br />
 - Set up the collections and having the documents inserted from the json files (steps 1 and 2) - Jared <br />
-- Step 3: Writing the queries needed - Arib <br />
+- Step 3: Writing the queries needed - Arib, Dric <br />
+- Step 3.5: Debug queries - Jennifer <br />
 - Step 4: Creating indices and analyzing runtime - <br />
+
 
 Testing for Task 1 <br />
 
