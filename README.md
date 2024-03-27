@@ -6,7 +6,7 @@ Group member names and ccids (3-4 members)
   arib1, Arib Amin. <br />
   jennif11, Jennifer Wang <br />
 
-# Group work break-down strategy - Started: 23 March, 2024, log updates here as we go, Completion: By hand-in deadline
+# Group work break-down strategy - Started: 23 March, 2024 || Completion: By hand-in deadline
 Our group adopted a collaborative approach where we divided the tasks based on individual strengths and interests. Here's a breakdown of the work items among partners:
 
 Arib <br />
