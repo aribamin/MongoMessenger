@@ -12,17 +12,17 @@ Our group adopted a collaborative approach where we divided the tasks based on i
 Arib
 
 
-Estimated Time Spent: 
+Estimated Time Spent: <br />
 Progress: Completed all tasks assigned
 
 Dric
-Wrote the initial timelines in the README.md file
-Estimated Time Spent: 
+Wrote the initial timelines in the README.md file <br />
+Estimated Time Spent: <br />
 Progress: Completed all tasks assigned
 
 Jared
 
-Estimated Time Spent: 
+Estimated Time Spent: <br />
 Progress: Completed all tasks assigned
 
 Jen
@@ -40,7 +40,7 @@ Update the readme file timelines, remind group members to discuss their contribu
 Task 1 - Started: 23 March, 2024 || Completition: <br />
 - Set up the collections and having the documents inserted from the json files (steps 1 and 2) - Jared <br />
 - Step 3: Writing the queries needed - Split up between everyone? <br />
-- Step 4: Creating indices and analyzing runtime - 
+- Step 4: Creating indices and analyzing runtime - <br />
 
 Task 2 - Started 26 March, 2024 || Compleition: <br />
 
