@@ -8,7 +8,7 @@ Group member names and ccids (3-4 members)
 
 # Group work break-down strategy
 Create the necessary starting files into the repo - Jared <br />
-
+Update the readme file with timelines as we go, remind group members to log their contributions in the discord group chat to keep a record of time as well as work done - Dric <br />
 Task 1: <br />
 - Set up the collections and having the documents inserted from the json files (steps 1 and 2) - Jared <br />
 - Step 3: Writing the queries needed - Split up between everyone? <br />
@@ -27,3 +27,4 @@ If you have used AI agents (such as ChatGPT), you must clearly explain how you h
 
 # Collaborations
 Names of anyone you have collaborated with (as much as it is allowed within the course policy) or a line saying that you did not collaborate with anyone else.  
+We declare that we did not collaborate with anyone else.
