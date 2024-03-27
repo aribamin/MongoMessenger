@@ -35,15 +35,19 @@ Coordination Method  <br />
 We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. 
 
 Initial Tasks:
+Ensure all members have joined the github repository for mini project 2, Completition: March 27th, 2024
 Create the necessary starting files into the repo - Jared <br />
 Update the readme file timelines, remind group members to discuss their contributions in the discord group chat to keep a record of time as well as work done- Dric <br />
 
-Task 1 - Started: 23 March, 2024 || Completition: <br />
+Task 1 - Started: 23 March, 2024 || Completition: 29th March, 2024<br />
 - Set up the collections and having the documents inserted from the json files (steps 1 and 2) - Jared <br />
-- Step 3: Writing the queries needed - Split up between everyone? <br />
+- Step 3: Writing the queries needed - Arib <br />
 - Step 4: Creating indices and analyzing runtime - <br />
 
-Task 2 - Started 26 March, 2024 || Compleition: <br />
+Testing for Task 1 <br />
+
+
+Task 2 - Started 26 March, 2024 || Compleition: 1 April, 2024 <br />
 
 
 # Code execution guide
