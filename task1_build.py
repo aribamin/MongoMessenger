@@ -10,9 +10,10 @@ The senders.json file will be read and all of its documents will be uploaded to 
 Note: MUST BE ABLE TO BUILD THE DATABASE IN UNDER 5 MINUTES
 
 To run the code:
-1. Start the database by running something like 'mongod --port 27012 --dbpath ~/mongodb_data_folder &' on a DIFFERENT TERMINAL- this will make the server run in background
+(0. If you haven't, run 'mkdir ~/mongodb_data_folder')
+1. Start the database by running something like 'mongod --port 54321 --dbpath ~/mongodb_data_folder &' - this will make the server run in background (should do on different terminal)
     - You can change the port number if you want
-2. Run this script using 'python3 task1_build.py 27012'
+2. Run this script using 'python3 task1_build.py 54321'
     - If you changed the port number, adjust it here
 '''
 
