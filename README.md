@@ -10,8 +10,13 @@ Group member names and ccids (3-4 members)
 Our group adopted a collaborative approach where we divided the tasks based on individual strengths and interests. Here's a breakdown of the work items among partners:
 
 Arib <br />
+Wrote initial queries for Task 1 Step 3
+Wrote indices code for Task 1 Step 4
 
 Estimated Time Spent: <br />
+Learning and writing queries (2 hours)
+Learning to create and write indices code (1 hour)
+
 Progress: Completed all tasks assigned
 
 Dric <br />
@@ -29,14 +34,14 @@ Progress: Completed all tasks assigned
 Jen <br />
 
 Estimated Time Spent: <br />
-testing queries debug (2 hour)
+testing queries debug (2 hours)
 Progress: Completed all tasks assigned  <br />
 
 Coordination Method  <br />
 We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. 
 
 Initial Tasks:
-Ensure all members have joined the github repository for mini project 2, Completition: March 27th, 2024
+Ensure all members have joined the GitHub repository for mini project 2, Completition: March 27th, 2024
 Create the necessary starting files into the repo - Jared <br />
 Update the readme file timelines, remind group members to discuss their contributions in the discord group chat to keep a record of time as well as work done- Dric <br />
 
@@ -44,7 +49,7 @@ Task 1 - Started: 23 March, 2024 || Completition: 29th March, 2024<br />
 - Set up the collections and having the documents inserted from the json files (steps 1 and 2) - Jared <br />
 - Step 3: Writing the queries needed - Arib, Dric <br />
 - Step 3.5: Debug queries - Jennifer <br />
-- Step 4: Creating indices and analyzing runtime - <br />
+- Step 4: Creating indices and analyzing runtime - Arib <br />
 
 
 Testing for Task 1 <br />
@@ -58,7 +63,7 @@ Please add code execution guide. Make sure to include all details.
 
 
 # AI Agents
-If you have used AI agents (such as ChatGPT), you must clearly explain how you havve used it and what were your prompt and model's answer. 
+If you have used AI agents (such as ChatGPT), you must clearly explain how you have used it and what were your prompt and model's answer. 
 
 # Collaborations
 Names of anyone you have collaborated with (as much as it is allowed within the course policy) or a line saying that you did not collaborate with anyone else.  
