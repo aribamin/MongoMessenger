@@ -10,12 +10,12 @@ Group member names and ccids (3-4 members)
 Our group adopted a collaborative approach where we divided the tasks based on individual strengths and interests. Here's a breakdown of the work items among partners:
 
 Arib <br />
-Wrote initial queries for Task 1 Step 3
+Wrote initial queries for Task 1 Step 3 <br />
 Wrote indices code for Task 1 Step 4
 
 Estimated Time Spent: <br />
 Learning and writing queries (2 hours) <br />
-Learning to create and write indices code (1 hour) <br />
+Learning to create and write indices code (1 hour)
 
 Progress: Completed all tasks assigned
 
