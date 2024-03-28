@@ -18,7 +18,8 @@ To run the code:
 
 from pymongo import MongoClient
 import sys
-import ijson
+import json
+import time
 
 # ------------------------- Error checking ----------------------------------
 if len(sys.argv) != 2:
@@ -32,48 +33,84 @@ except:
     sys.exit(1)
 # ---------------------------------------------------------------------------
 
-# --------------------------- Open database ---------------------------------
+# -------------------- Open database and collections ------------------------
 # Create a client and connect to db
 client = MongoClient('localhost', DB_PORT)
 db = client["MP2Norm"]
 
-# ---------------------- Messages collection --------------------------------
 # Open the messages collection, drop if it exists
 messagesCol = db["messages"]
-messagesCol.drop() # drop if exists
+messagesCol.drop()
 
+# Open the senders collection, drop if it exists
+sendersCol = db["senders"]
+sendersCol.drop()
 
-# Now load everything from messages.json into the messages mongo collection
-# Use ijson to parse the file as an input stream rather than loading the entire file
-# https://pythonspeed.com/articles/json-memory-streaming/
+# START THE TIMER (by getting the current time)
+startTime = time.time()
+# ---------------------- Messages collection --------------------------------
+
+# messages.json will have only one item per line, so we can iterate line by line
 loadedDocuments = []
-with open('messages.json', 'rb') as file:
-    for document in ijson.items(file, 'item'):
-        loadedDocuments.append(document)
+file = open('messages.json', 'r')
+while True:
+    line = file.readline()
 
-        # If 5000 messages loaded, insert into the database and clear from memory
-        if len(loadedDocuments) == 5000:
-            messagesCol.insert_many(loadedDocuments)
-            loadedDocuments = []
+    # Stop reading if line is empty
+    if not line:
+        break
+    
+    # Find first '{' and last '}' to find the entry
+    itemBeginning = line.find('{')
+    itemEnd = line.rfind('}')
+
+    # Skip line if there is no valid entry
+    if itemBeginning == -1 or itemEnd == -1:
+        continue
+
+    # Entry has been deemed valid, so append it to the list of documents
+    line = line[itemBeginning : itemEnd + 1]
+    loadedDocuments.append(json.loads(line))
+
+    # If 5000 messages loaded, insert into the database and clear from memory
+    if len(loadedDocuments) == 5000:
+        messagesCol.insert_many(loadedDocuments)
+        loadedDocuments = []
 
 # Insert any leftover documents into the database
 if len(loadedDocuments) > 0:
     messagesCol.insert_many(loadedDocuments)
     loadedDocuments = []
 
+
+file.close()
+
 # ---------------------------------------------------------------------------
 
 # ----------------------- Senders collection --------------------------------
-# Open the senders collection, drop if it exists
-sendersCol = db["senders"]
-sendersCol.drop() # drop if exists
 
-# Load the messages and insert into the database
-# We aren't concerned about the file being too large this time
+# senders.json does not have a guaranteed formatting, so load the entire file and parse
 loadedDocuments = []
-with open('senders.json', 'rb') as file:
-    for document in ijson.items(file, 'item'):
-        loadedDocuments.append(document)
+file = open('senders.json', 'r')
+string = file.read()
+file.close()
 
+while True:
+    itemBeginning = string.find('{')
+    itemEnd = string.find('}')
+
+    if itemBeginning == -1 or itemEnd == -1:
+        break
+    
+    # Append the found document into the array and remove it from the data string
+    loadedDocuments.append(json.loads(string[itemBeginning : itemEnd + 1]))
+    string = string[itemEnd + 1 :]
+
+# Insert the json documents now that we've parsed through them
+#print(loadedDocuments)
 sendersCol.insert_many(loadedDocuments)
 
+# ---------------------------------------------------------------------------
+
+endTime = time.time()
+print(f"Total time elapsed to read and populate into messages and senders: {endTime - startTime} seconds")
