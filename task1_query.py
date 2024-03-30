@@ -2,7 +2,7 @@
 
 # should implement step 3 and 4 of task 1 it seems
 import pymongo 
-#import MongoClient
+from pymongo import MongoClient
 import sys
 import time
 
@@ -18,13 +18,7 @@ def connect_to_mongodb(port):
 def query1(db):
     try:
         start_time = time.time()
-        # correct regex pattern; no need for '*' wildcard characters.
-        # using 'i' option for case-insensitive search.
-        #count = db.messages.count_documents({"text": {"$regex": "*ant*"}}, maxTimeMS=120000)
-        #count = db.messages.count_documents({"text": {"$regex": "ant", "$options": "i"}}, maxTimeMS=120000)
-        
-        #its case sensitive time 
-        count = db.messages.count_documents({"text": {"$regex": "ant"}}, maxTimeMS=120000)
+        count = db.messages.count_documents({"text": {"$regex": "ant"}}, maxTimeMS=120000) #case sensitive
         end_time = time.time()
         print(f"Number of messages containing 'ant': {count}")
         print(f"Time taken: {(end_time - start_time) * 1000} milliseconds")
@@ -39,7 +33,7 @@ def query2(db):
             {"$sort": {"count": -1}},
             {"$limit": 1}
         ]
-        result = list(db.messages.aggregate(pipeline, maxTimeMS=120000))
+        result = list(db.messages.aggregate(pipeline, maxTimeMS = 120000))
         end_time = time.time()
         if result:
             print(f"Sender with the most messages: {result[0]['_id']} (Messages sent: {result[0]['count']})")
@@ -51,19 +45,20 @@ def query2(db):
 
 from bson.objectid import ObjectId
 
-#Q3: Return the number of messages where the sender’s credit is 0.
 def query3(db):
     try:
         start_time = time.time()
 
-        # find all senders
-        senders_with_zero_credit = db.senders.find({"credit": 0}, {"_id": 1, "sender_id": 1})
+        # get senders
+        senders_with_zero_credit = db.senders.find({"credit": 0}, {"_id": 1, "sender_id": 1}).max_time_ms(120000)
 
+        #extract their ids
         sender_ids = []
         for sender in senders_with_zero_credit:
             s = str(sender['sender_id'])
             sender_ids.append(s)
 
+        #add msg count for each sender
         message_counts = 0
         ms = 0
         for sender in sender_ids:
@@ -71,7 +66,6 @@ def query3(db):
             message_counts += ms
 
         print(f"Number of messages from senders with credit 0: {message_counts}")
-    
         end_time = time.time()
         print(f"Time taken: {(end_time - start_time) * 1000} milliseconds")
     except pymongo.errors.ExecutionTimeout:
@@ -80,10 +74,7 @@ def query3(db):
 def query4(db):
     try:
         start_time = time.time()
-        #can't accept maxtime input -> typeerror 
-        result = db.senders.update_many({"credit": {"$lt": 100}}, {"$mul": {"credit": 2}}, {maxTimeMS: 120000})
-        #this should fix it below
-        #result = db.senders.update_many({"credit": {"$lt": 100}}, {"$mul": {"credit": 2}})
+        result = db.senders.update_many({"credit": {"$lt": 100}}, {"$mul": {"credit": 2}})
         end_time = time.time()
         print(f"Updated {result.modified_count} senders' credits.")
         print(f"Time taken: {(end_time - start_time) * 1000} milliseconds")
@@ -105,4 +96,4 @@ if __name__ == "__main__":
     print("------------------------------------------")
     query3(db)
     print("------------------------------------------")
-    #query4(db)
+    query4(db)

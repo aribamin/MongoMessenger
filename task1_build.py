@@ -17,6 +17,7 @@ To run the code:
     - If you changed the port number, adjust it here
 '''
 
+import pymongo 
 from pymongo import MongoClient
 import sys
 import json
