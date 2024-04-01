@@ -81,6 +81,18 @@ def query4(db):
     except pymongo.errors.ExecutionTimeout:
         print("Query 4 took more than 2 minutes.")
 
+def create_indices(db):
+    try:
+        start_time = time.time()
+        db.messages.create_index([("sender", pymongo.ASCENDING)])
+        db.messages.create_index([("text", pymongo.TEXT)])
+        db.senders.create_index([("sender_id", pymongo.ASCENDING)])
+        end_time = time.time()
+        print("Indices created successfully.")
+        print(f"Time taken: {(end_time - start_time) * 1000} milliseconds")
+    except pymongo.errors.ExecutionTimeout:
+        print("Creating indices took more than 2 minutes.")
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python script.py <port>")
