@@ -1,5 +1,4 @@
 import pymongo
-from pymongo import MongoClient
 import sys
 import json
 import time
@@ -90,7 +89,7 @@ def main(db_port):
     Parameters:
         db_port (int): The port number of the MongoDB database.
     """
-    client = MongoClient('localhost', db_port)
+    client = pymongo.MongoClient('localhost', db_port)
     db = client["MP2Embd"]
     messagesCol = db["messages"]
     messagesCol.drop()  # Drop existing collection if it exists
