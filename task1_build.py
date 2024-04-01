@@ -48,23 +48,6 @@ messagesCol.drop()
 sendersCol = db["senders"]
 sendersCol.drop()
 
-# Configure indices ---------------------
-# Ensure indices are created after collections are dropped and before inserting new documents
-
-# Creating indices for the 'messages' collection
-# Index for 'sender' field using the default index type
-messagesCol.create_index([('sender', pymongo.ASCENDING)])
-
-# Text index for 'text' field for efficient full-text searches
-messagesCol.create_index([('text', pymongo.TEXT)])
-
-# Creating index for the 'senders' collection
-# Index for 'sender_id' field to optimize sender lookups
-sendersCol.create_index([('sender_id', pymongo.ASCENDING)])
-
-print("Indices creation for 'messages' and 'senders' collections completed.")
-# ---------------------------------------
-
 # START THE TIMER (by getting the current time)
 startTime = time.time()
 # ---------------------- Messages collection --------------------------------
