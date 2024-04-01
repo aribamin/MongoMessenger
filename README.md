@@ -28,16 +28,16 @@ Jared <br />
 Initialized necessary repo files
 
 Estimated Time Spent: <br />
-Progress: Completed all tasks assigned
+Progress: Completed all tasks assigned <br />
 
 Jen <br />
 
 Estimated Time Spent: <br />
-testing queries debug (2 hours)
+testing queries debug (2 hours) 
 Progress: Completed all tasks assigned  <br />
 
 # Method of Coordination 
-We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. 
+We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. <br />
 
 Initial Tasks:
 Ensure all members have joined the GitHub repository for mini project 2, Completition: March 27th, 2024
@@ -69,13 +69,13 @@ Readme.md with all updates - Dric
 - Steps required to run code
 
 report.pdf - Jared, Arib, Jen, Dric
--General overview
--User guide (+ code instructions)
--Handling large json files strategy
--paste query outputs
--whatever explanations apply for explaining why the runtimes change (because of indices)
--discussion of if embedded or not is better for this schema?
--(double check anything else it asks)
+-General overview <br />
+-User guide (+ code instructions) <br />
+-Handling large json files strategy <br />
+-paste query outputs <br />
+-whatever explanations apply for explaining why the runtimes change (because of indices) <br />
+-discussion of if embedded or not is better for this schema? <br />
+-(double check anything else it asks) <br />
 
 # Code execution guide
 1. Clone this repository to your local machine. <br />
@@ -83,10 +83,10 @@ report.pdf - Jared, Arib, Jen, Dric
 3. Ensure the mongodb server is running in the background using mongod --port {any_open_port} --dbpath {folder of choice} & <br />
 4. Run the provided Python scripts, with the appropriate command-line arguments as specified in the project guidelines. <br />
 5. Ensure you run a build script and wait till it outputs Time taken before executing a query script. For example, run "python3 task1_build.py {port_number}", time taken will output; then run "python3 task2_query.py {same_port_number}" <br />
-6. Refer to the report for a comprehensive overview of the system, user guide, and analysis of query runtimes.
+6. Refer to the report for a comprehensive overview of the system, user guide, and analysis of query runtimes. <br />
 
 Note
-Please ensure that all required files and configurations are set up according to the project specifications to ensure smooth execution of the code. If you encounter any issues, refer to the report or reach out to the group members for assistance.
+Please ensure that all required files and configurations are set up according to the project specifications to ensure smooth execution of the code. If you encounter any issues, refer to the report or reach out to the group members for assistance. <br />
 
 # AI Agents
 We did not utilize any AI tools for this project.
