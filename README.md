@@ -15,7 +15,8 @@ Wrote indices code for Task 1 Step 4
 
 Estimated Time Spent: <br />
 Learning and writing queries (2 hours) <br />
-Learning and writing indices code (1 hour)
+Learning and writing indices code (1 hour) <br />
+Working on report and going over specifications (1 hour)
 
 Progress: Completed all tasks assigned
 
