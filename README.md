@@ -15,9 +15,6 @@ Wrote indices code for Task 1 Step 4
 Writing report and checking specifications for Task 1
 
 Estimated Time Spent: <br />
-Learning and writing queries (2 hours) <br />
-Learning and writing indices code (1 hour) <br />
-Working on report and going over specifications (1 hour)
 
 Progress: Completed all tasks assigned
 
@@ -63,6 +60,22 @@ Task 2 - Started 26 March, 2024 || Compleition: 1 April, 2024 <br />
 - Step 2: Writing the queries needed - Arib, Jen <br />
 - Step 2.5: Debug queries - Dric, Arib <br />
 - Final docstrings and outputs - Dric <br /> 
+
+Readme.md with all updates - Dric
+- List names and ccids of all group members
+- No collaborators
+- No Ai tools
+- Group Work break-down strategy, time spent and progress made
+- Steps required to run code
+
+report.pdf - Jared, Arib, Jen, Dric
+-General overview
+-User guide (+ code instructions)
+-Handling large json files strategy
+-paste query outputs
+-whatever explanations apply for explaining why the runtimes change (because of indices)
+-discussion of if embedded or not is better for this schema?
+-(double check anything else it asks)
 
 # Code execution guide
 1. Clone this repository to your local machine. <br />
