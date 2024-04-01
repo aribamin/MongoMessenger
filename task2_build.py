@@ -7,8 +7,7 @@ import time
 def load_senders(filepath):
     with open(filepath, 'r') as file:
         senders = json.load(file)
-    sender_lookup = {sender['sender_id']: sender for sender in senders}
-    return sender_lookup
+    return {sender['sender_id']: sender for sender in senders}
 
 def embed_sender_info(sender_lookup, message):
     sender_info = sender_lookup.get(message['sender'])
@@ -23,16 +22,29 @@ def insert_messages_batch(messagesCol, batch):
 def process_messages(filepath, messagesCol, sender_lookup, batch_size=5000):
     batch = []
     with open(filepath, 'r') as file:
-        for line in file:
+        while True:
+            line = file.readline()
+            if not line:
+                break  # Exit the loop if no more lines
+            
+            # Find the start and end of a valid JSON entry
+            itemBeginning = line.find('{')
+            itemEnd = line.rfind('}')
+            if itemBeginning == -1 or itemEnd == -1:
+                continue  # Skip line if no valid entry
+            
+            # Extract and parse the valid JSON string
+            line = line[itemBeginning : itemEnd + 1]
             try:
-                message = json.loads(line.strip())
+                message = json.loads(line)
                 enriched_message = embed_sender_info(sender_lookup, message)
                 batch.append(enriched_message)
                 if len(batch) >= batch_size:
                     insert_messages_batch(messagesCol, batch)
-                    batch = []
+                    batch = []  # Reset batch after inserting
             except json.JSONDecodeError:
                 continue
+
     # Insert any remaining messages
     insert_messages_batch(messagesCol, batch)
 
