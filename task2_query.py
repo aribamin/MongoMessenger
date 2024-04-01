@@ -1,5 +1,4 @@
 import pymongo
-from pymongo import MongoClient
 import sys
 import time
 
@@ -51,11 +50,14 @@ def query3(db):
         print("Query 3 took more than 2 minutes.")
 
 def query4(db):
-    messages = db.messages.find({"sender_info.credit": {"$lt": 100}})
-    for message in messages:
-        new_credit = message["sender_info"]["credit"] * 2
-        db.messages.update_one({"_id": message["_id"]}, {"$set": {"sender_info.credit": new_credit}})
-    print("Credits updated.")
+    try:
+        start_time = time.time()
+        db.messages.update_many({"sender_info.credit": {"$lt": 100}}, {"$mul": {"sender_info.credit": 2}})
+        end_time = time.time()
+        print(f"Double credit of senders that have credit less than 100: {(end_time - start_time) * 1000} milliseconds")
+
+    except pymongo.errors.ExecutionTimeout:
+        print("Query 4 took more than 2 minutes.")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
