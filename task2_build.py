@@ -5,21 +5,56 @@ import json
 import time
 
 def load_senders(filepath):
+    """
+    Loads sender information from a JSON file.
+
+    Parameters:
+        filepath (str): The path to the JSON file containing sender information.
+
+    Returns:
+        dict: A dictionary mapping sender IDs to sender information.
+    """
     with open(filepath, 'r') as file:
         senders = json.load(file)
     return {sender['sender_id']: sender for sender in senders}
 
 def embed_sender_info(sender_lookup, message):
+    """
+    Embeds sender information into a message.
+
+    Parameters:
+        sender_lookup (dict): A dictionary mapping sender IDs to sender information.
+        message (dict): The message to embed sender information into.
+
+    Returns:
+        dict: The message with sender information embedded.
+    """
     sender_info = sender_lookup.get(message['sender'])
     if sender_info:
         message['sender_info'] = sender_info
     return message
 
 def insert_messages_batch(messagesCol, batch):
+    """
+    Inserts a batch of messages into the messages collection.
+
+    Parameters:
+        messagesCol (pymongo.collection.Collection): The collection to insert messages into.
+        batch (list): A list of messages to insert.
+    """
     if batch:  # Check if the batch is not empty
         messagesCol.insert_many(batch)
 
 def process_messages(filepath, messagesCol, sender_lookup, batch_size=5000):
+    """
+    Processes messages from a file and inserts them into the messages collection.
+
+    Parameters:
+        filepath (str): The path to the file containing messages.
+        messagesCol (pymongo.collection.Collection): The collection to insert messages into.
+        sender_lookup (dict): A dictionary mapping sender IDs to sender information.
+        batch_size (int): The size of each batch of messages to insert.
+    """
     batch = []
     with open(filepath, 'r') as file:
         while True:
@@ -49,6 +84,12 @@ def process_messages(filepath, messagesCol, sender_lookup, batch_size=5000):
     insert_messages_batch(messagesCol, batch)
 
 def main(db_port):
+    """
+    Main function to build the MongoDB collection.
+
+    Parameters:
+        db_port (int): The port number of the MongoDB database.
+    """
     client = MongoClient('localhost', db_port)
     db = client["MP2Embd"]
     messagesCol = db["messages"]

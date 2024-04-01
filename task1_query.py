@@ -3,6 +3,15 @@ import sys
 import time
 
 def connect_to_mongodb(port):
+    """
+    Connects to MongoDB server.
+
+    Parameters:
+        port (int): The port number on which MongoDB server is running.
+
+    Returns:
+        pymongo.MongoClient: A MongoClient instance representing the connection to MongoDB.
+    """
     try:
         client = pymongo.MongoClient(f"mongodb://localhost:{port}/")
         print("Connected successfully to MongoDB")
@@ -12,6 +21,12 @@ def connect_to_mongodb(port):
         sys.exit(1)
 
 def query1(db):
+    """
+    Executes query 1 on the MongoDB database.
+
+    Parameters:
+        db (pymongo.database.Database): The MongoDB database to query.
+    """
     try:
         start_time = time.time()
         count = db.messages.count_documents({"text": {"$regex": "ant"}}, maxTimeMS=120000) #case sensitive
@@ -22,6 +37,12 @@ def query1(db):
         print("Query 1 took more than 2 minutes.")
 
 def query2(db):
+    """
+    Executes query 2 on the MongoDB database.
+
+    Parameters:
+        db (pymongo.database.Database): The MongoDB database to query.
+    """
     try:
         start_time = time.time()
         pipeline = [
@@ -40,6 +61,12 @@ def query2(db):
         print("Query 2 took more than 2 minutes.")
 
 def query3(db):
+    """
+    Executes query 3 on the MongoDB database.
+
+    Parameters:
+        db (pymongo.database.Database): The MongoDB database to query.
+    """
     try:
         start_time = time.time()
 
@@ -66,6 +93,12 @@ def query3(db):
         print("Query 3 took more than 2 minutes.")
 
 def query4(db):
+    """
+    Executes query 4 on the MongoDB database.
+
+    Parameters:
+        db (pymongo.database.Database): The MongoDB database to query.
+    """
     try:
         start_time = time.time()
         db.senders.update_many({"credit": {"$lt": 100}}, {"$mul": {"credit": 2}})
@@ -75,6 +108,12 @@ def query4(db):
         print("Query 4 took more than 2 minutes.")
 
 def create_indices(db):
+    """
+    Creates indices on MongoDB collections.
+
+    Parameters:
+        db (pymongo.database.Database): The MongoDB database on which indices will be created.
+    """
     try:
         start_time = time.time()
         db.messages.create_index([("sender", pymongo.ASCENDING)])
