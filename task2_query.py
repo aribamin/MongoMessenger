@@ -1,80 +1,99 @@
-# This isn't mentioned in the instructions but the deliverables says we will need one :/
+# must run and display the output for requested queries
 
-import pymongo
-import json
+# should implement step 3 and 4 of task 1 it seems
+import pymongo 
+from pymongo import MongoClient
 import sys
 import time
 
-def main():
-    if len(sys.argv) != 2:
-        print("Usage: python3 task2_queries.py <port_number>")
-        sys.exit(1)
-    
+def connect_to_mongodb(port):
     try:
-        port = int(sys.argv[1])
-    except ValueError:
-        print("Port must be an integer.")
+        client = pymongo.MongoClient(f"mongodb://localhost:{port}/")
+        print("Connected successfully to MongoDB")
+        return client
+    except pymongo.errors.ConnectionFailure as e:
+        print("Could not connect to MongoDB: %s" % e)
         sys.exit(1)
 
-    # Connect to MongoDB
-    client = pymongo.MongoClient('localhost', port)
-
-    # Access the MP2Embd database and messages collection
-    db = client["MP2Embd"]
-    messagesCol = db["messages"]
-    sendersCol = db["senders"]
-
-    # Q1: Number of messages that have "ant" in their text
-    print("Q1: Number of messages that have 'ant' in their text")
-    start_time = time.time()
+def query1(db):
     try:
-        count = messagesCol.count_documents({"text": {"$regex": "ant"}})
+        start_time = time.time()
+        count = db.messages.count_documents({"text": {"$regex": "ant"}}, maxTimeMS=120000) #case sensitive
         end_time = time.time()
-        print(f"Number of messages with 'ant' in text: {count}")
+        print(f"Number of messages containing 'ant': {count}")
         print(f"Time taken: {(end_time - start_time) * 1000} milliseconds")
     except pymongo.errors.ExecutionTimeout:
-        print("Query took more than two minutes to execute.")
+        print("Query 1 took more than 2 minutes.")
 
-    # Q2: Nickname/phone number of sender who has sent the greatest number of messages
-    print("\nQ2: Nickname/phone number of sender with most messages")
-    start_time = time.time()
+def query2(db):
     try:
-        result = messagesCol.aggregate([
+        start_time = time.time()
+        pipeline = [
             {"$group": {"_id": "$sender", "count": {"$sum": 1}}},
             {"$sort": {"count": -1}},
             {"$limit": 1}
-        ])
+        ]
+        result = list(db.messages.aggregate(pipeline, maxTimeMS = 120000))
         end_time = time.time()
-        for doc in result:
-            print(f"Sender: {doc['_id']}, Number of messages sent: {doc['count']}")
+        if result:
+            print(f"Sender with the most messages: {result[0]['_id']} (Messages sent: {result[0]['count']})")
+        else:
+            print("No messages found.")
         print(f"Time taken: {(end_time - start_time) * 1000} milliseconds")
     except pymongo.errors.ExecutionTimeout:
-        print("Query took more than two minutes to execute.")
+        print("Query 2 took more than 2 minutes.")
 
-    # Q3: Number of messages where sender's credit is 0
-    print("\nQ3: Number of messages where sender's credit is 0")
-    start_time = time.time()
-    try:
-        count = messagesCol.count_documents({"sender_info.credit": 0})
-        end_time = time.time()
-        print(f"Number of messages where sender's credit is 0: {count}")
-        print(f"Time taken: {(end_time - start_time) * 1000} milliseconds")
-    except pymongo.errors.ExecutionTimeout:
-        print("Query took more than two minutes to execute.")
+from bson.objectid import ObjectId
 
-    # Q4: Double the credit of all senders whose credit is less than 100
-    print("\nQ4: Double the credit of all senders whose credit is less than 100")
-    start_time = time.time()
+def query3(db):
     try:
-        result = sendersCol.update_many(
-            {"credit": {"$lt": 100}},
-            {"$mul": {"credit": 2}}
-        )
+        start_time = time.time()
+
+        # get senders
+        senders_with_zero_credit = db.senders.find({"credit": 0}, {"_id": 1, "sender_id": 1}).max_time_ms(120000)
+
+        #extract their ids
+        sender_ids = []
+        for sender in senders_with_zero_credit:
+            s = str(sender['sender_id'])
+            sender_ids.append(s)
+
+        #add msg count for each sender
+        message_counts = 0
+        ms = 0
+        for sender in sender_ids:
+            ms = db.messages.count_documents({"sender": sender})
+            message_counts += ms
+
+        print(f"Number of messages from senders with credit 0: {message_counts}")
         end_time = time.time()
-        print(f"Number of senders whose credit was doubled: {result.modified_count}")
         print(f"Time taken: {(end_time - start_time) * 1000} milliseconds")
     except pymongo.errors.ExecutionTimeout:
-        print("Query took more than two minutes to execute.")
+        print("Query 3 took more than 2 minutes.")
+
+def query4(db):
+    try:
+        start_time = time.time()
+        result = db.senders.update_many({"credit": {"$lt": 100}}, {"$mul": {"credit": 2}})
+        end_time = time.time()
+        print(f"Updated {result.modified_count} senders' credits.")
+        print(f"Time taken: {(end_time - start_time) * 1000} milliseconds")
+    except pymongo.errors.ExecutionTimeout:
+        print("Query 4 took more than 2 minutes.")
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) != 2:
+        print("Usage: python script.py <port>")
+        sys.exit(1)
+    
+    port = int(sys.argv[1])
+    client = connect_to_mongodb(port)
+    db = client["MP2Norm"]
+
+    query1(db)
+    print("------------------------------------------")
+    query2(db)
+    print("------------------------------------------")
+    query3(db)
+    print("------------------------------------------")
+    query4(db)

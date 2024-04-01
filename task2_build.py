@@ -1,60 +1,86 @@
-# must take a json file in the current directory and constructs a MongoDB collection
-# must take a port number under which the MongoDB server is running as a command line argument
-# must connect to the mongod server and will create a database named MP2Embd (if it does not exist)
-
-# implement step 1 and 2?
-
-import pymongo
-import json
+import pymongo 
+from pymongo import MongoClient
 import sys
+import json
 import time
 
-def main():
-    if len(sys.argv) != 2:
-        print("Usage: python3 task2_build.py <port_number>")
-        sys.exit(1)
-    
-    try:
-        port = int(sys.argv[1])
-    except ValueError:
-        print("Port must be an integer.")
-        sys.exit(1)
+# ------------------------- Error checking ----------------------------------
+if len(sys.argv) != 2:
+    print("Usage: python3 task2_build.py <port>")
+    sys.exit(1)
 
-    # Connect to MongoDB
-    client = pymongo.MongoClient('localhost', port)
+try:
+    DB_PORT = int(sys.argv[1])
+except:
+    print("Port must be an integer")
+    sys.exit(1)
+# ---------------------------------------------------------------------------
 
-    # Create or access the MP2Embd database
-    db = client["MP2Embd"]
+# -------------------- Open database and collections ------------------------
+# Create a client and connect to db
+client = MongoClient('localhost', DB_PORT)
+db = client["MP2Embd"]
 
-    # Drop messages collection if it exists and create a new one
-    db.messages.drop()
-    messages_col = db["messages"]
+# Open the messages collection, drop if it exists
+messagesCol = db["messages"]
+messagesCol.drop()
 
-    # Load sender information into memory
-    with open('senders.json', 'r') as sender_file:
-        senders = json.load(sender_file)
+# Open the senders collection
+sendersCol = db["senders"]
 
-    # Process messages.json in batches and embed sender information
-    batch_size = 10000
-    start_time = time.time()
-    with open('messages.json', 'r') as message_file:
-        batch = []
-        for line in message_file:
-            data = json.loads(line)
-            sender_info = next((sender for sender in senders if sender["sender_id"] == data["sender"]), None)
-            if sender_info:
-                data["sender_info"] = sender_info
-                batch.append(data)
-            if len(batch) == batch_size:
-                messages_col.insert_many(batch)
-                batch = []
+print("Database connection established.")
 
-        # Insert remaining documents
-        if batch:
-            messages_col.insert_many(batch)
+# -------------------------- Read senders data -----------------------------
+senders_data = {}
+try:
+    with open('senders.json', 'r') as senders_file:
+        senders_data = json.load(senders_file)
+        print("Sender data loaded successfully.")
+except Exception as e:
+    print(f"Error loading senders data: {e}")
+    sys.exit(1)
+# ---------------------------------------------------------------------------
+
+# ----------------------- Process messages data ----------------------------
+batch_size = 10000  # Adjust batch size according to system memory
+messages_batch = []
+
+start_time = time.time()
+
+try:
+    with open('messages.json', 'r') as messages_file:
+        for line in messages_file:
+            message = json.loads(line)
+
+            # Embed sender info
+            sender_id = message['sender']
+            if sender_id in senders_data:
+                sender_info = senders_data[sender_id]
+                message['sender_info'] = sender_info
+
+            messages_batch.append(message)
+
+            # Insert batch into database when it reaches batch size
+            if len(messages_batch) == batch_size:
+                messagesCol.insert_many(messages_batch)
+                messages_batch = []
+
+    # Insert any remaining messages
+    if messages_batch:
+        messagesCol.insert_many(messages_batch)
 
     end_time = time.time()
-    print(f"Time taken to read data and create collection: {end_time - start_time} seconds")
+    print(f"Messages inserted successfully. Time taken: {end_time - start_time} seconds.")
 
-if __name__ == "__main__":
-    main()
+except Exception as e:
+    print(f"Error processing messages data: {e}")
+    sys.exit(1)
+# ---------------------------------------------------------------------------
+
+# ------------------------- Index creation ---------------------------------
+# No index creation in this step
+# ---------------------------------------------------------------------------
+
+# Close database connection
+client.close()
+print("Database connection closed.")
