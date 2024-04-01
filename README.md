@@ -39,7 +39,7 @@ Estimated Time Spent: <br />
 testing queries debug (2 hours)
 Progress: Completed all tasks assigned  <br />
 
-Coordination Method  <br />
+# Method of Coordination 
 We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. 
 
 Initial Tasks:
@@ -49,23 +49,32 @@ Update the readme file timelines, remind group members to discuss their contribu
 
 Task 1 - Started: 23 March, 2024 || Completition: 29th March, 2024<br />
 - Set up the collections and having the documents inserted from the json files (steps 1 and 2) - Jared <br />
-- Step 3: Writing the queries needed - Arib, Dric <br />
+- Step 3: Writing the queries needed - Arib <br />
 - Step 3.5: Debug queries - Jennifer <br />
-- Step 4: Creating indices and analyzing runtime - Arib <br />
-
+- Step 4: Creating indices and reprinting- Arib, Dric <br />
+- Step 5: Final docstrings and outputs - Dric <br /> 
 
 Testing for Task 1 <br />
-
+- Create databases on different ports <br />
+- Shows proper usage, if Python script is run improperly <br />
 
 Task 2 - Started 26 March, 2024 || Compleition: 1 April, 2024 <br />
-
+- Set up the collections and having the documents inserted from the json files- Arib <br />
+- Step 3: Writing the queries needed - Arib, Dric <br />
+- Step 3.5: Debug queries - Jennifer <br />
+- Step 4: Creating indices - Arib <br />
+- Step 5: Final docstrings and outputs - Dric <br /> 
 
 # Code execution guide
-Please add code execution guide. Make sure to include all details.
-
+1. Clone this repository to your local machine. <br />
+2. Ensure you have Python installed along with the necessary libraries (such as pymongo).
+3. Run the provided Python scripts (task1_build.py, task1_query.py, task2_build.py, task2_query.py) with the appropriate command-line arguments as specified in the project guidelines. <br />
+4. Refer to the report for a comprehensive overview of the system, user guide, and analysis of query runtimes.
+Note
+Please ensure that all required files and configurations are set up according to the project specifications to ensure smooth execution of the code. If you encounter any issues, refer to the report or reach out to the group members for assistance.
 
 # AI Agents
-If you have used AI agents (such as ChatGPT), you must clearly explain how you have used it and what were your prompt and model's answer. 
+We did not utilize any AI tools for this project.
 
 # Collaborations
 Names of anyone you have collaborated with (as much as it is allowed within the course policy) or a line saying that you did not collaborate with anyone else.  
