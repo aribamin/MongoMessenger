@@ -24,7 +24,7 @@ import time
 
 # ------------------------- Error checking ----------------------------------
 if len(sys.argv) != 2:
-    print("Usage: python3 main.py <database_name>")
+    print("Usage: python3 main.py <port_number>")
     sys.exit(1)
 
 try:
