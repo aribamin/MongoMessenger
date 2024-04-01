@@ -17,8 +17,7 @@ To run the code:
     - If you changed the port number, adjust it here
 '''
 
-import pymongo 
-from pymongo import MongoClient
+import pymongo
 import sys
 import json
 import time
@@ -37,7 +36,7 @@ except:
 
 # -------------------- Open database and collections ------------------------
 # Create a client and connect to db
-client = MongoClient('localhost', DB_PORT)
+client = pymongo.MongoClient('localhost', DB_PORT)
 db = client["MP2Norm"]
 
 # Open the messages collection, drop if it exists
