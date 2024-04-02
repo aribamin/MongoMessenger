@@ -1,4 +1,4 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Fozs_Okj)
+![image](https://github.com/ualberta-cmput291/w24-mp2-mongomaxxers/assets/70481917/eef20f5e-144a-4bf2-b9d5-db3d30512eb2)[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Fozs_Okj)
 # CMPUT 291 Mini Project 2 - Winter 2024  
 Group member names and ccids (3-4 members)  
   jgourley, Jared Gourley. <br />
@@ -12,28 +12,39 @@ Our group adopted a collaborative approach where we divided the tasks based on i
 Arib <br />
 Wrote initial queries for Task 1 Step 3 <br />
 Wrote indices code for Task 1 Step 4
-Writing report and checking specifications for Task 1
-
-Estimated Time Spent: <br />
+Collaborated on Build and Query file for Task 2
+Final touch-up on report.pdf <br />
+Estimated Time Spent: 9 hr <br />
 
 Progress: Completed all tasks assigned
 
 Dric <br />
-Contributed to group strategy and crafted a tentative README.md file <br />
+Ensured proper output format for all queries <br />
+Tested all build files extensively with different queries and made necessary changes <br />
+Ran all queries on Lab machines and Local Machines for testing <br />
+Updated Readme With Timelines of task completiton <br />
+Commented all python Scripts <br />
+Updated report.pdf with all outputs, collaborated with Jared for runtime differences <br />
 
-Estimated Time Spent: <br />
+Estimated Time Spent: 9 hr <br />
 Progress: Completed all tasks assigned
 
 Jared <br />
-Initialized necessary repo files
+Initialized necessary repo files <br />
+Wrote and tested Task 1 build <br />
+Explained project specifications to group <br />
+Brainstorming approach to Task 1 and 2 queries <br />
+Updating report.pdf for Task 1 <br />
 
-Estimated Time Spent: <br />
+Estimated Time Spent: 9 hr hr <br />
 Progress: Completed all tasks assigned <br />
 
 Jen <br />
+Finalized queries for Task 1 Step 3 according to guidelines<br />
+Collaborated on Build and Query file for Task 2
+Final touch-up on report.pdf <br />
+Estimated Time Spent: 9 hr <br />
 
-Estimated Time Spent: <br />
-testing queries debug (2 hours) 
 Progress: Completed all tasks assigned  <br />
 
 # Method of Coordination 
@@ -60,6 +71,10 @@ Task 2 - Started 26 March, 2024 || Compleition: 1 April, 2024 <br />
 - Step 2: Writing the queries needed - Arib, Jen <br />
 - Step 2.5: Debug queries - Dric, Arib <br />
 - Final docstrings and outputs - Dric <br /> 
+
+Testing for Task 2 <br />
+- Create databases on different ports <br />
+- Shows proper usage, if Python script is run improperly <br />
 
 Readme.md with all updates - Dric
 - List names and ccids of all group members
