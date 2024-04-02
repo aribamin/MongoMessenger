@@ -1,3 +1,4 @@
+#imports
 import pymongo 
 import sys
 import time
@@ -13,10 +14,10 @@ def connect_to_mongodb(port):
         pymongo.MongoClient: A MongoClient instance representing the connection to MongoDB.
     """
     try:
-        client = pymongo.MongoClient(f"mongodb://localhost:{port}/")
-        print("Connected successfully to MongoDB")
+        client = pymongo.MongoClient(f"mongodb://localhost:{port}/") #use mongo client to connect to database on specified port
+        print("Connected successfully to MongoDB") #success msg
         return client
-    except pymongo.errors.ConnectionFailure as e:
+    except pymongo.errors.ConnectionFailure as e: #connection failure handler
         print("Could not connect to MongoDB: %s" % e)
         sys.exit(1)
 
@@ -28,12 +29,12 @@ def query1(db):
         db (pymongo.database.Database): The MongoDB database to query.
     """
     try:
-        start_time = time.time()
-        count = db.messages.count_documents({"text": {"$regex": "ant"}}, maxTimeMS=120000) #case sensitive
+        start_time = time.time() #time taken for query usiing built in time function
+        count = db.messages.count_documents({"text": {"$regex": "ant"}}, maxTimeMS=120000) #case sensitive, so we used regex and not a specific text so we used regex
         end_time = time.time()
         print(f"Number of messages containing 'ant': {count}")
         print(f"Time taken: {(end_time - start_time) * 1000} milliseconds")
-    except pymongo.errors.ExecutionTimeout:
+    except pymongo.errors.ExecutionTimeout: #Times out if more than 1200000 for a query
         print("Query 1 took more than 2 minutes.")
 
 def query2(db):
@@ -85,9 +86,9 @@ def query3(db):
         for sender in sender_ids:
             ms = db.messages.count_documents({"sender": sender})
             message_counts += ms
-
-        print(f"Number of messages from senders with credit 0: {message_counts}")
         end_time = time.time()
+        print(f"Number of messages from senders with credit 0: {message_counts}")
+        
         print(f"Time taken: {(end_time - start_time) * 1000} milliseconds")
     except pymongo.errors.ExecutionTimeout:
         print("Query 3 took more than 2 minutes.")
