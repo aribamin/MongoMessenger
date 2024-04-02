@@ -110,5 +110,4 @@ Please ensure that all required files and configurations are set up according to
 We did not utilize any AI tools for this project.
 
 # Collaborations
-Names of anyone you have collaborated with (as much as it is allowed within the course policy) or a line saying that you did not collaborate with anyone else.  
 We declare that we did not collaborate with anyone else.
