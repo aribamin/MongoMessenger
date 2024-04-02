@@ -13,39 +13,39 @@ Our group adopted a collaborative approach where we divided the tasks based on i
 We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. <br />
 
 Initial Tasks:
-Ensure all members have joined the GitHub repository for mini project 2, Completition: March 27th, 2024
+Ensure all members have joined the GitHub repository for mini project 2, Completion: March 27th, 2024
 Create the necessary starting files into the repo - Jared <br />
 Update the readme file timelines, remind group members to discuss their contributions in the discord group chat to keep a record of time as well as work done- Dric <br />
 
-Task 1 - Started: 23 March, 2024 || Completition: 29th March, 2024<br />
+Task 1 - Started: 23 March, 2024 || Completion: 29th March, 2024<br />
 - Set up the collections and having the documents inserted from the json files (steps 1 and 2) - Jared <br />
 - Step 3: Writing the queries needed - Arib <br />
 - Step 3.5: Debug queries - Jennifer <br />
 - Step 4: Creating indices and reprinting- Arib, Dric <br />
 - Final docstrings and outputs - Dric <br /> 
 
-Testing for Task 1 - Dric, Arib, Jared, Jen... Started 23 March, 2024 || Completition: 1 April, 2024<br />
+Testing for Task 1 - Dric, Arib, Jared, Jen... Started 23 March, 2024 || Completion: 1 April, 2024<br />
 - Create databases on different ports <br />
 - Shows proper usage, if Python script is run improperly <br />
 
-Task 2 - Started 26 March, 2024 || Compleition: 1 April, 2024 <br />
+Task 2 - Dric, Arib, Jen... Started 26 March, 2024 || Completion: 1 April, 2024 <br />
 - Step 1: Set up the collections and having the documents inserted from the json files- Arib, Dric <br />
 - Step 2: Writing the queries needed - Arib, Jen <br />
 - Step 2.5: Debug queries - Dric, Arib <br />
 - Final docstrings and outputs - Dric <br /> 
 
-Testing for Task 2 - Dric, Arib, Jared, Jen...Started 26 March, 2024 || Compleition: 1 April, 2024 <br />
+Testing for Task 2 - Dric, Arib, Jared, Jen...Started 26 March, 2024 || Completion: 1 April, 2024 <br />
 - Create databases on different ports <br />
 - Shows proper usage, if Python script is run improperly <br />
 
-Readme.md with all updates - Dric...Started 25 March, 2024 || Completition: 1 April, 2024<br />
+Readme.md with all updates - Dric...Started 25 March, 2024 || Completion: 1 April, 2024<br />
 - List names and ccids of all group members
 - No collaborators
 - No Ai tools
 - Group Work break-down strategy, time spent and progress made
 - Steps required to run code
 
-report.pdf - Jared, Arib, Jen, Dric...Started 28 March, 2024 || Completition: 1 April, 2024<br />
+report.pdf - Jared, Arib, Jen, Dric...Started 28 March, 2024 || Completion: 1 April, 2024<br />
 - General overview 
 - User guide (+ code instructions) 
 - Handling large json files strategy
@@ -77,7 +77,7 @@ Progress: Completed all tasks assigned
 
 Jared <br />
 Initialized necessary repo files (30 mins)<br />
-Wrote and tested Task 1 build, kickstarting the project (1 hr) <br />
+Wrote and tested Task 1 build, kickstarting the project (1 hr 30) <br />
 Explained project specifications to group (30 mins)<br />
 Brainstorming approach to Task 1 and 2 queries (1 hr)<br />
 Updating report.pdf for Task 1 (2 hr)<br />
@@ -91,15 +91,16 @@ Debugged all queries of Task 1 (3 hr) <br />
 Collaborated on Build and Query file for Task 2 (1 hr) <br />
 Final touch-up on report.pdf (1 hr)<br />
 
-Estimated Time Spent: 5 hr <br />
+Estimated Time Spent: 7 hr <br />
 Progress: Completed all tasks assigned  <br />
 
 # Code execution guide
-- Clone this repository to your local machine. 
+- Clone this repository to your local machine.
+- Download the senders.json and messages.json file into the root of the repository (they are too large to be stored on Github).
 - Ensure you have Python installed along with the necessary libraries (such as pymongo). 
 - Ensure the mongodb server is running in the background using mongod --port {any_open_port} --dbpath {folder of choice} & 
-- Run the provided Python scripts, with the appropriate command-line arguments as specified in the project guidelines. 
-- Ensure you run a build script and wait till it outputs Time taken before executing a query script. For example, run "python3 task1_build.py {port_number}", time taken will output; then run "python3 task2_query.py {same_port_number}" 
+- Run the provided Python scripts, with the appropriate command-line arguments (port number) as specified in the project guidelines. 
+- Ensure you run a build script and wait till it outputs Time taken (finishes executing) before executing a query script. For example, run "python3 task1_build.py {port_number}", time taken will output; then run "python3 task1_query.py {same_port_number}" 
 - Refer to the report for a comprehensive overview of the system, user guide, and analysis of query runtimes. 
 
 Note
