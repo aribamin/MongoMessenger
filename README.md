@@ -23,6 +23,7 @@ Ensured proper output format for all queries <br />
 Tested all build files extensively with different queries and made necessary changes <br />
 Ran all queries on Lab machines and Local Machines for testing <br />
 Updated Readme With Timelines of task completiton <br />
+Collaborated on Build and Query file for Task 3 <br />
 Commented all python Scripts <br />
 Updated report.pdf with all outputs, collaborated with Jared for runtime differences <br />
 
@@ -31,7 +32,7 @@ Progress: Completed all tasks assigned
 
 Jared <br />
 Initialized necessary repo files <br />
-Wrote and tested Task 1 build <br />
+Wrote and tested Task 1 build, kickstarting the project <br />
 Explained project specifications to group <br />
 Brainstorming approach to Task 1 and 2 queries <br />
 Updating report.pdf for Task 1 <br />
