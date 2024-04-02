@@ -1,5 +1,5 @@
 '''
-This program opens up a MongoDB database on a specific port number give through a command line arguments, and
+This program opens up a MongoDB database on a specific port number given through a command line argument, and
 inserts data into the database.
 - This affects the senders and messages collection, which will have all their documents dropped and re-entered
 
@@ -47,9 +47,43 @@ messagesCol.drop()
 sendersCol = db["senders"]
 sendersCol.drop()
 
+
+# ----------------------- Senders collection --------------------------------
+
 # START THE TIMER (by getting the current time)
 startTime = time.time()
+
+# senders.json does not have a guaranteed formatting, so load the entire file and parse
+loadedDocuments = []
+file = open('senders.json', 'r')
+string = file.read()
+file.close()
+
+while True:
+    itemBeginning = string.find('{')
+    itemEnd = string.find('}')
+
+    if itemBeginning == -1 or itemEnd == -1:
+        break
+    
+    # Append the found document into the array and remove it from the data string
+    loadedDocuments.append(json.loads(string[itemBeginning : itemEnd + 1]))
+    string = string[itemEnd + 1 :]
+
+# Insert the json documents now that we've parsed through them
+sendersCol.insert_many(loadedDocuments)
+
+# Print the final time
+endTime = time.time()
+print(f"Total time elapsed to read and populate into senders collection: {endTime - startTime} seconds")
+
+# ---------------------------------------------------------------------------
+
+
 # ---------------------- Messages collection --------------------------------
+
+# START THE TIMER (by getting the current time)
+startTime = time.time()
 
 # messages.json will have only one item per line, so we can iterate line by line
 loadedDocuments = []
@@ -86,31 +120,8 @@ if len(loadedDocuments) > 0:
 
 file.close()
 
-# ---------------------------------------------------------------------------
-
-# ----------------------- Senders collection --------------------------------
-
-# senders.json does not have a guaranteed formatting, so load the entire file and parse
-loadedDocuments = []
-file = open('senders.json', 'r')
-string = file.read()
-file.close()
-
-while True:
-    itemBeginning = string.find('{')
-    itemEnd = string.find('}')
-
-    if itemBeginning == -1 or itemEnd == -1:
-        break
-    
-    # Append the found document into the array and remove it from the data string
-    loadedDocuments.append(json.loads(string[itemBeginning : itemEnd + 1]))
-    string = string[itemEnd + 1 :]
-
-# Insert the json documents now that we've parsed through them
-sendersCol.insert_many(loadedDocuments)
-
-# ---------------------------------------------------------------------------
-
+# Print the final time
 endTime = time.time()
-print(f"Total time elapsed to read and populate into messages and senders: {endTime - startTime} seconds")
+print(f"Total time elapsed to read and populate into messagess collection: {endTime - startTime} seconds")
+
+# ---------------------------------------------------------------------------
