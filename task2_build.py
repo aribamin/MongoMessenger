@@ -70,8 +70,8 @@ def process_messages(filepath, messagesCol, sender_lookup, batch_size=5000):
             # Extract and parse the valid JSON string
             line = line[itemBeginning : itemEnd + 1]
             try:
-                message = json.loads(line)
-                enriched_message = embed_sender_info(sender_lookup, message)
+                message = json.loads(line) #json of each line of message
+                enriched_message = embed_sender_info(sender_lookup, message) #embedded message
                 batch.append(enriched_message)
                 if len(batch) >= batch_size:
                     insert_messages_batch(messagesCol, batch)
