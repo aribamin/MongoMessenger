@@ -103,7 +103,7 @@ def query4(db):
         start_time = time.time()
         db.senders.update_many({"credit": {"$lt": 100}}, {"$mul": {"credit": 2}})
         end_time = time.time()
-        print(f"Double credit of senders that have credit less than 100: {(end_time - start_time) * 1000} milliseconds")
+        print(f"Double the credit of senders that have credit less than 100: {(end_time - start_time) * 1000} milliseconds")
     except pymongo.errors.ExecutionTimeout:
         print("Query 4 took more than 2 minutes.")
 
