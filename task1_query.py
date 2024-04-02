@@ -23,7 +23,7 @@ def connect_to_mongodb(port):
 
 def query1(db):
     """
-    Executes query 1 on the MongoDB database.
+    Q1: Return the number of messages that have “ant” in their text.
 
     Parameters:
         db (pymongo.database.Database): The MongoDB database to query.
@@ -39,7 +39,7 @@ def query1(db):
 
 def query2(db):
     """
-    Executes query 2 on the MongoDB database.
+    Q2: Find the nick name/phone number of the sender who has sent the greatest number of messages. Return the nick name/phone number and the number of messages sent by that sender. You do not need to return the senders name or credit.
 
     Parameters:
         db (pymongo.database.Database): The MongoDB database to query.
@@ -47,7 +47,7 @@ def query2(db):
     try:
         start_time = time.time()
         pipeline = [
-            {"$group": {"_id": "$sender", "count": {"$sum": 1}}},
+            {"$group": {"_id": "$sender", "count": {"$sum": 1}}}, 
             {"$sort": {"count": -1}},
             {"$limit": 1}
         ]
@@ -63,7 +63,7 @@ def query2(db):
 
 def query3(db):
     """
-    Executes query 3 on the MongoDB database.
+    Q3: Return the number of messages where the sender’s credit is 0.
 
     Parameters:
         db (pymongo.database.Database): The MongoDB database to query.
@@ -95,7 +95,7 @@ def query3(db):
 
 def query4(db):
     """
-    Executes query 4 on the MongoDB database.
+    Q4: Double the credit of all senders whose credit is less than 100.
 
     Parameters:
         db (pymongo.database.Database): The MongoDB database to query.
@@ -110,7 +110,7 @@ def query4(db):
 
 def create_indices(db):
     """
-    Creates indices on MongoDB collections.
+    Make the indexes for sender, text and sender_id
 
     Parameters:
         db (pymongo.database.Database): The MongoDB database on which indices will be created.
