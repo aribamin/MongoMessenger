@@ -24,7 +24,7 @@ Task 1 - Started: 23 March, 2024 || Completition: 29th March, 2024<br />
 - Step 4: Creating indices and reprinting- Arib, Dric <br />
 - Final docstrings and outputs - Dric <br /> 
 
-Testing for Task 1 - Dric, Arib, Jared, Jen <br />
+Testing for Task 1 - Dric, Arib, Jared, Jen... Started 23 March, 2024 || Completition: 1 April, 2024<br />
 - Create databases on different ports <br />
 - Shows proper usage, if Python script is run improperly <br />
 
@@ -34,7 +34,7 @@ Task 2 - Started 26 March, 2024 || Compleition: 1 April, 2024 <br />
 - Step 2.5: Debug queries - Dric, Arib <br />
 - Final docstrings and outputs - Dric <br /> 
 
-Testing for Task 2 - Dric, Arib, Jared, Jen <br />
+Testing for Task 2 - Dric, Arib, Jared, Jen...Started 26 March, 2024 || Compleition: 1 April, 2024 <br />
 - Create databases on different ports <br />
 - Shows proper usage, if Python script is run improperly <br />
 
