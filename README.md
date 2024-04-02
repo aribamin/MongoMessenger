@@ -85,13 +85,13 @@ Readme.md with all updates - Dric
 - Steps required to run code
 
 report.pdf - Jared, Arib, Jen, Dric
--General overview <br />
--User guide (+ code instructions) <br />
--Handling large json files strategy <br />
--paste query outputs <br />
--whatever explanations apply for explaining why the runtimes change (because of indices) <br />
--discussion of if embedded or not is better for this schema? <br />
--(double check anything else it asks) <br />
+- General overview 
+-User guide (+ code instructions) 
+-Handling large json files strategy
+-paste query outputs 
+-whatever explanations apply for explaining why the runtimes change (because of indices)
+-discussion of if embedded or not is better for this schema?
+-(double check anything else it asks)
 
 # Code execution guide
 -Clone this repository to your local machine. <br />
