@@ -55,42 +55,42 @@ report.pdf - Jared, Arib, Jen, Dric...Started 28 March, 2024 || Completition: 1 
 - (double check anything else it asks)
 
 Arib <br />
-Wrote initial queries for Task 1 Step 3 <br />
-Wrote indices code for Task 1 Step 4 <br />
-Collaborated on Build and Query file for Task 2 <br />
-Final touch-up on report.pdf <br />
-Estimated Time Spent: 9 hr <br />
+Wrote initial queries for Task 1 Step 3 (2 hr)<br />
+Wrote indices code for Task 1 Step 4 (1 hr) <br />
+Collaborated on Build and Query file for Task 2 (1 hr 30)<br />
+Final touch-up on report.pdf (1 hr) <br />
 
+Estimated Time Spent: 5 hr 30 <br />
 Progress: Completed all tasks assigned
 
 Dric <br />
-Ensured proper output format for all queries <br />
-Tested all build files extensively with different queries and made necessary changes <br />
-Ran all queries on Lab machines and Local Machines for testing <br />
-Updated Readme With Timelines of task completiton <br />
-Collaborated on Build and Query file for Task 3 <br />
-Commented all python Scripts <br />
-Updated report.pdf with all outputs, collaborated with Jared for runtime differences <br />
+Ensured proper output format for all queries (1 hr)<br />
+Tested all build files extensively with different queries and made necessary changes (1 hr)<br />
+Ran all queries on Lab machines and Local Machines for testing (30 mins)<br />
+Updated Readme With Timelines of task completiton (30 mins) <br />
+Collaborated on Build and Query file for Task 3 (1 hr)<br />
+Commented all python Scripts (30 mins)<br />
+Updated report.pdf with all outputs, collaborated with Jared for runtime differences (1 hr)<br />
 
-Estimated Time Spent: 9 hr <br />
+Estimated Time Spent: 5 hr 30<br />
 Progress: Completed all tasks assigned
 
 Jared <br />
-Initialized necessary repo files <br />
-Wrote and tested Task 1 build, kickstarting the project <br />
-Explained project specifications to group <br />
-Brainstorming approach to Task 1 and 2 queries <br />
-Updating report.pdf for Task 1 <br />
+Initialized necessary repo files (30 mins)<br />
+Wrote and tested Task 1 build, kickstarting the project (1 hr) <br />
+Explained project specifications to group (30 mins)<br />
+Brainstorming approach to Task 1 and 2 queries (1 hr)<br />
+Updating report.pdf for Task 1 (2 hr)<br />
 
-Estimated Time Spent: 9 hr hr <br />
+Estimated Time Spent: 5 hr 30 <br />
 Progress: Completed all tasks assigned <br />
 
 Jen <br />
-Finalized queries for Task 1 Step 3 according to guidelines <br />
-Collaborated on Build and Query file for Task 2 <br />
-Final touch-up on report.pdf <br />
-Estimated Time Spent: 9 hr <br />
+Finalized queries for Task 1 Step 3 according to guidelines (3 hr)<br />
+Collaborated on Build and Query file for Task 2 (1 hr) <br />
+Final touch-up on report.pdf (1 hr)<br />
 
+Estimated Time Spent: 5 hr <br />
 Progress: Completed all tasks assigned  <br />
 
 # Code execution guide
