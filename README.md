@@ -9,35 +9,8 @@ Group member names and ccids (3-4 members)
 # Group work break-down strategy - Started: 23 March, 2024 || Completion: April 1, 2024
 Our group adopted a collaborative approach where we divided the tasks based on individual strengths and interests. Here's a breakdown of the work items among partners:
 
-Arib <br />
-Wrote initial queries for Task 1 Step 3 <br />
-Wrote indices code for Task 1 Step 4
-Writing report and checking specifications for Task 1
-
-Estimated Time Spent: <br />
-
-Progress: Completed all tasks assigned
-
-Dric <br />
-Contributed to group strategy and crafted a tentative README.md file <br />
-
-Estimated Time Spent: <br />
-Progress: Completed all tasks assigned
-
-Jared <br />
-Initialized necessary repo files
-
-Estimated Time Spent: <br />
-Progress: Completed all tasks assigned
-
-Jen <br />
-
-Estimated Time Spent: <br />
-testing queries debug (2 hours)
-Progress: Completed all tasks assigned  <br />
-
 # Method of Coordination 
-We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. 
+We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. <br />
 
 Initial Tasks:
 Ensure all members have joined the GitHub repository for mini project 2, Completition: March 27th, 2024
@@ -51,7 +24,7 @@ Task 1 - Started: 23 March, 2024 || Completition: 29th March, 2024<br />
 - Step 4: Creating indices and reprinting- Arib, Dric <br />
 - Final docstrings and outputs - Dric <br /> 
 
-Testing for Task 1 <br />
+Testing for Task 1 - Dric, Arib, Jared, Jen... Started 23 March, 2024 || Completition: 1 April, 2024<br />
 - Create databases on different ports <br />
 - Shows proper usage, if Python script is run improperly <br />
 
@@ -61,32 +34,76 @@ Task 2 - Started 26 March, 2024 || Compleition: 1 April, 2024 <br />
 - Step 2.5: Debug queries - Dric, Arib <br />
 - Final docstrings and outputs - Dric <br /> 
 
-Readme.md with all updates - Dric
+Testing for Task 2 - Dric, Arib, Jared, Jen...Started 26 March, 2024 || Compleition: 1 April, 2024 <br />
+- Create databases on different ports <br />
+- Shows proper usage, if Python script is run improperly <br />
+
+Readme.md with all updates - Dric...Started 25 March, 2024 || Completition: 1 April, 2024<br />
 - List names and ccids of all group members
 - No collaborators
 - No Ai tools
 - Group Work break-down strategy, time spent and progress made
 - Steps required to run code
 
-report.pdf - Jared, Arib, Jen, Dric
--General overview
--User guide (+ code instructions)
--Handling large json files strategy
--paste query outputs
--whatever explanations apply for explaining why the runtimes change (because of indices)
--discussion of if embedded or not is better for this schema?
--(double check anything else it asks)
+report.pdf - Jared, Arib, Jen, Dric...Started 28 March, 2024 || Completition: 1 April, 2024<br />
+- General overview 
+- User guide (+ code instructions) 
+- Handling large json files strategy
+- paste query outputs 
+- whatever explanations apply for explaining why the runtimes change (because of indices)
+- discussion of if embedded or not is better for this schema?
+- (double check anything else it asks)
+
+Arib <br />
+Wrote initial queries for Task 1 Step 3 (2 hr)<br />
+Wrote indices code for Task 1 Step 4 (1 hr) <br />
+Collaborated on Build and Query file for Task 2 (1 hr 30)<br />
+Final touch-up on report.pdf (1 hr) <br />
+
+Estimated Time Spent: 5 hr 30 <br />
+Progress: Completed all tasks assigned
+
+Dric <br />
+Ensured proper output format for all queries (1 hr)<br />
+Tested all build files extensively with different queries and made necessary changes (1 hr)<br />
+Ran all queries on Lab machines and Local Machines for testing (30 mins)<br />
+Updated Readme With Timelines of task completiton (30 mins) <br />
+Collaborated on Build and Query file for Task 3 (1 hr)<br />
+Commented all python Scripts (30 mins)<br />
+Updated report.pdf with all outputs, collaborated with Jared for runtime differences (1 hr)<br />
+
+Estimated Time Spent: 5 hr 30<br />
+Progress: Completed all tasks assigned
+
+Jared <br />
+Initialized necessary repo files (30 mins)<br />
+Wrote and tested Task 1 build, kickstarting the project (1 hr) <br />
+Explained project specifications to group (30 mins)<br />
+Brainstorming approach to Task 1 and 2 queries (1 hr)<br />
+Updating report.pdf for Task 1 (2 hr)<br />
+
+Estimated Time Spent: 5 hr 30 <br />
+Progress: Completed all tasks assigned <br />
+
+Jen <br />
+Wrote queries for Task 1 Step 3 according to guidelines (2 hr)<br />
+Debugged all queries of Task 1 (3 hr) <br />
+Collaborated on Build and Query file for Task 2 (1 hr) <br />
+Final touch-up on report.pdf (1 hr)<br />
+
+Estimated Time Spent: 5 hr <br />
+Progress: Completed all tasks assigned  <br />
 
 # Code execution guide
-1. Clone this repository to your local machine. <br />
-2. Ensure you have Python installed along with the necessary libraries (such as pymongo). <br />
-3. Ensure the mongodb server is running in the background using mongod --port {any_open_port} --dbpath {folder of choice} & <br />
-4. Run the provided Python scripts, with the appropriate command-line arguments as specified in the project guidelines. <br />
-5. Ensure you run a build script and wait till it outputs Time taken before executing a query script. For example, run "python3 task1_build.py {port_number}", time taken will output; then run "python3 task2_query.py {same_port_number}" <br />
-6. Refer to the report for a comprehensive overview of the system, user guide, and analysis of query runtimes.
+- Clone this repository to your local machine. 
+- Ensure you have Python installed along with the necessary libraries (such as pymongo). 
+- Ensure the mongodb server is running in the background using mongod --port {any_open_port} --dbpath {folder of choice} & 
+- Run the provided Python scripts, with the appropriate command-line arguments as specified in the project guidelines. 
+- Ensure you run a build script and wait till it outputs Time taken before executing a query script. For example, run "python3 task1_build.py {port_number}", time taken will output; then run "python3 task2_query.py {same_port_number}" 
+- Refer to the report for a comprehensive overview of the system, user guide, and analysis of query runtimes. 
 
 Note
-Please ensure that all required files and configurations are set up according to the project specifications to ensure smooth execution of the code. If you encounter any issues, refer to the report or reach out to the group members for assistance.
+Please ensure that all required files and configurations are set up according to the project specifications to ensure smooth execution of the code. If you encounter any issues, refer to the report or reach out to the group members for assistance. <br />
 
 # AI Agents
 We did not utilize any AI tools for this project.
