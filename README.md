@@ -38,14 +38,14 @@ Testing for Task 2 - Dric, Arib, Jared, Jen...Started 26 March, 2024 || Compleit
 - Create databases on different ports <br />
 - Shows proper usage, if Python script is run improperly <br />
 
-Readme.md with all updates - Dric
+Readme.md with all updates - Dric...Started 25 March, 2024 || Completition: 1 April, 2024<br />
 - List names and ccids of all group members
 - No collaborators
 - No Ai tools
 - Group Work break-down strategy, time spent and progress made
 - Steps required to run code
 
-report.pdf - Jared, Arib, Jen, Dric
+report.pdf - Jared, Arib, Jen, Dric...Started 28 March, 2024 || Completition: 1 April, 2024<br />
 - General overview 
 - User guide (+ code instructions) 
 - Handling large json files strategy
