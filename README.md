@@ -1,4 +1,4 @@
-![image](https://github.com/ualberta-cmput291/w24-mp2-mongomaxxers/assets/70481917/eef20f5e-144a-4bf2-b9d5-db3d30512eb2)[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Fozs_Okj)
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Fozs_Okj)
 # CMPUT 291 Mini Project 2 - Winter 2024  
 Group member names and ccids (3-4 members)  
   jgourley, Jared Gourley. <br />
