@@ -86,20 +86,20 @@ Readme.md with all updates - Dric
 
 report.pdf - Jared, Arib, Jen, Dric
 - General overview 
--User guide (+ code instructions) 
--Handling large json files strategy
--paste query outputs 
--whatever explanations apply for explaining why the runtimes change (because of indices)
--discussion of if embedded or not is better for this schema?
--(double check anything else it asks)
+- User guide (+ code instructions) 
+- Handling large json files strategy
+- paste query outputs 
+- whatever explanations apply for explaining why the runtimes change (because of indices)
+- discussion of if embedded or not is better for this schema?
+- (double check anything else it asks)
 
 # Code execution guide
--Clone this repository to your local machine. <br />
--Ensure you have Python installed along with the necessary libraries (such as pymongo). <br />
--Ensure the mongodb server is running in the background using mongod --port {any_open_port} --dbpath {folder of choice} & <br />
--Run the provided Python scripts, with the appropriate command-line arguments as specified in the project guidelines. <br />
--Ensure you run a build script and wait till it outputs Time taken before executing a query script. For example, run "python3 task1_build.py {port_number}", time taken will output; then run "python3 task2_query.py {same_port_number}" <br />
--Refer to the report for a comprehensive overview of the system, user guide, and analysis of query runtimes. <br />
+- Clone this repository to your local machine. 
+- Ensure you have Python installed along with the necessary libraries (such as pymongo). 
+- Ensure the mongodb server is running in the background using mongod --port {any_open_port} --dbpath {folder of choice} & 
+- Run the provided Python scripts, with the appropriate command-line arguments as specified in the project guidelines. 
+- Ensure you run a build script and wait till it outputs Time taken before executing a query script. For example, run "python3 task1_build.py {port_number}", time taken will output; then run "python3 task2_query.py {same_port_number}" 
+- Refer to the report for a comprehensive overview of the system, user guide, and analysis of query runtimes. 
 
 Note
 Please ensure that all required files and configurations are set up according to the project specifications to ensure smooth execution of the code. If you encounter any issues, refer to the report or reach out to the group members for assistance. <br />
