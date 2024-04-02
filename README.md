@@ -11,8 +11,8 @@ Our group adopted a collaborative approach where we divided the tasks based on i
 
 Arib <br />
 Wrote initial queries for Task 1 Step 3 <br />
-Wrote indices code for Task 1 Step 4
-Collaborated on Build and Query file for Task 2
+Wrote indices code for Task 1 Step 4 <br />
+Collaborated on Build and Query file for Task 2 <br />
 Final touch-up on report.pdf <br />
 Estimated Time Spent: 9 hr <br />
 
@@ -40,8 +40,8 @@ Estimated Time Spent: 9 hr hr <br />
 Progress: Completed all tasks assigned <br />
 
 Jen <br />
-Finalized queries for Task 1 Step 3 according to guidelines<br />
-Collaborated on Build and Query file for Task 2
+Finalized queries for Task 1 Step 3 according to guidelines <br />
+Collaborated on Build and Query file for Task 2 <br />
 Final touch-up on report.pdf <br />
 Estimated Time Spent: 9 hr <br />
 
