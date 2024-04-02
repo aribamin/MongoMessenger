@@ -9,45 +9,6 @@ Group member names and ccids (3-4 members)
 # Group work break-down strategy - Started: 23 March, 2024 || Completion: April 1, 2024
 Our group adopted a collaborative approach where we divided the tasks based on individual strengths and interests. Here's a breakdown of the work items among partners:
 
-Arib <br />
-Wrote initial queries for Task 1 Step 3 <br />
-Wrote indices code for Task 1 Step 4 <br />
-Collaborated on Build and Query file for Task 2 <br />
-Final touch-up on report.pdf <br />
-Estimated Time Spent: 9 hr <br />
-
-Progress: Completed all tasks assigned
-
-Dric <br />
-Ensured proper output format for all queries <br />
-Tested all build files extensively with different queries and made necessary changes <br />
-Ran all queries on Lab machines and Local Machines for testing <br />
-Updated Readme With Timelines of task completiton <br />
-Collaborated on Build and Query file for Task 3 <br />
-Commented all python Scripts <br />
-Updated report.pdf with all outputs, collaborated with Jared for runtime differences <br />
-
-Estimated Time Spent: 9 hr <br />
-Progress: Completed all tasks assigned
-
-Jared <br />
-Initialized necessary repo files <br />
-Wrote and tested Task 1 build, kickstarting the project <br />
-Explained project specifications to group <br />
-Brainstorming approach to Task 1 and 2 queries <br />
-Updating report.pdf for Task 1 <br />
-
-Estimated Time Spent: 9 hr hr <br />
-Progress: Completed all tasks assigned <br />
-
-Jen <br />
-Finalized queries for Task 1 Step 3 according to guidelines <br />
-Collaborated on Build and Query file for Task 2 <br />
-Final touch-up on report.pdf <br />
-Estimated Time Spent: 9 hr <br />
-
-Progress: Completed all tasks assigned  <br />
-
 # Method of Coordination 
 We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. <br />
 
@@ -92,6 +53,45 @@ report.pdf - Jared, Arib, Jen, Dric
 - whatever explanations apply for explaining why the runtimes change (because of indices)
 - discussion of if embedded or not is better for this schema?
 - (double check anything else it asks)
+
+Arib <br />
+Wrote initial queries for Task 1 Step 3 <br />
+Wrote indices code for Task 1 Step 4 <br />
+Collaborated on Build and Query file for Task 2 <br />
+Final touch-up on report.pdf <br />
+Estimated Time Spent: 9 hr <br />
+
+Progress: Completed all tasks assigned
+
+Dric <br />
+Ensured proper output format for all queries <br />
+Tested all build files extensively with different queries and made necessary changes <br />
+Ran all queries on Lab machines and Local Machines for testing <br />
+Updated Readme With Timelines of task completiton <br />
+Collaborated on Build and Query file for Task 3 <br />
+Commented all python Scripts <br />
+Updated report.pdf with all outputs, collaborated with Jared for runtime differences <br />
+
+Estimated Time Spent: 9 hr <br />
+Progress: Completed all tasks assigned
+
+Jared <br />
+Initialized necessary repo files <br />
+Wrote and tested Task 1 build, kickstarting the project <br />
+Explained project specifications to group <br />
+Brainstorming approach to Task 1 and 2 queries <br />
+Updating report.pdf for Task 1 <br />
+
+Estimated Time Spent: 9 hr hr <br />
+Progress: Completed all tasks assigned <br />
+
+Jen <br />
+Finalized queries for Task 1 Step 3 according to guidelines <br />
+Collaborated on Build and Query file for Task 2 <br />
+Final touch-up on report.pdf <br />
+Estimated Time Spent: 9 hr <br />
+
+Progress: Completed all tasks assigned  <br />
 
 # Code execution guide
 - Clone this repository to your local machine. 
