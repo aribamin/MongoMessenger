@@ -86,7 +86,8 @@ Estimated Time Spent: 5 hr 30 <br />
 Progress: Completed all tasks assigned <br />
 
 Jen <br />
-Finalized queries for Task 1 Step 3 according to guidelines (3 hr)<br />
+Wrote queries for Task 1 Step 3 according to guidelines (2 hr)<br />
+Debugged all queries of Task 1 (3 hr) <br />
 Collaborated on Build and Query file for Task 2 (1 hr) <br />
 Final touch-up on report.pdf (1 hr)<br />
 
