@@ -1,10 +1,9 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Fozs_Okj)
-# CMPUT 291 Mini Project 2 - Winter 2024  
-Group member names and ccids (3-4 members)  
-  jgourley, Jared Gourley. <br />
-  dricmoy, Dricmoy Bhattacharjee.  <br />
-  arib1, Arib Amin. <br />
-  jennif11, Jennifer Wang <br />
+# Project 2 
+Group member names
+  Jared Gourley. <br />
+  Dricmoy Bhattacharjee.  <br />
+  Arib Amin. <br />
+  Jennifer Wang <br />
 
 # Group work break-down strategy - Started: 23 March, 2024 || Completion: April 1, 2024
 Our group adopted a collaborative approach where we divided the tasks based on individual strengths and interests. Here's a breakdown of the work items among partners:
@@ -13,7 +12,7 @@ Our group adopted a collaborative approach where we divided the tasks based on i
 We maintained communication primarily through a Discord group chat, where we regularly updated each other on progress, discussed any roadblocks, and coordinated the integration of individual components. Additionally, we held virtual meetings on discord to synchronize our efforts and address any issues collectively. <br />
 
 Initial Tasks:
-Ensure all members have joined the GitHub repository for mini project 2, Completion: March 27th, 2024
+Ensure all members have joined the GitHub repository for project 2, Completion: March 27th, 2024
 Create the necessary starting files into the repo - Jared <br />
 Update the readme file timelines, remind group members to discuss their contributions in the discord group chat to keep a record of time as well as work done- Dric <br />
 
@@ -39,7 +38,7 @@ Testing for Task 2 - Dric, Arib, Jared, Jen...Started 26 March, 2024 || Completi
 - Shows proper usage, if Python script is run improperly <br />
 
 Readme.md with all updates - Dric...Started 25 March, 2024 || Completion: 1 April, 2024<br />
-- List names and ccids of all group members
+- List names of all group members
 - No collaborators
 - No Ai tools
 - Group Work break-down strategy, time spent and progress made
@@ -105,9 +104,3 @@ Progress: Completed all tasks assigned  <br />
 
 Note
 Please ensure that all required files and configurations are set up according to the project specifications to ensure smooth execution of the code. If you encounter any issues, refer to the report or reach out to the group members for assistance. <br />
-
-# AI Agents
-We did not utilize any AI tools for this project.
-
-# Collaborations
-We declare that we did not collaborate with anyone else.
